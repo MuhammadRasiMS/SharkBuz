@@ -15,9 +15,9 @@ const MainCard = ({slides}) => {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   }, [currentIndex, slides]);
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  }
+  // const goToSlide = (slideIndex) => {
+  //   setCurrentIndex(slideIndex);
+  // }
   useEffect(()=>{
     if (timerRef.current){
       clearTimeout(timerRef.current);

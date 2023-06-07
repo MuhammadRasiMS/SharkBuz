@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SharkBuz</title>
   </head>
@@ -16,4 +17,12 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+   <script>
+        new kursor({
+            type: 1,
+            removeDefaultCursor: true,
+            color: 'rgba(240, 250, 240)'
+        })
+    </script>
 </html>

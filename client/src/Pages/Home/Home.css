@@ -6,10 +6,13 @@
     width: 800px;
     height: 544px;
     margin: 40px 0;
+     margin-left: -50px;
+
 }
 
 .container-styles1 {
     width: 565px;
     height: 543px;
     margin: 40px 0;
+    margin-left: -160px;
 }

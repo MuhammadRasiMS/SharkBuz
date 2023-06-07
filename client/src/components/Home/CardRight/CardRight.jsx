@@ -24,22 +24,31 @@ const CardRight = ({ slides2 }) => {
     }
     timerRef.current = setTimeout(() => {
       goToNext();
-    }, 2000);
+    }, 4000);
     return () => clearTimeout(timerRef.current);
   }, [goToNext]);
   return (
     <div className="slider">
       <div className="left-arrow" onClick={goToPrevious}></div>
       <div className="right-arrow" onClick={goToNext}></div>
-      <div className="image">
-        <img src={slides2[currentIndex].imag} alt="products" />
+      <div className="image1">
+        <img src={slides2[currentIndex].image} alt="products" />
       </div>
       <div className="title">{slides2[currentIndex].title}</div>
+      <div className="description1">{slides2[currentIndex].description}</div>
+      <div className="card-bottom">
+        <div>
+          <p className="count">545K+ played</p>
+        </div>
+        <div>
+          <button>Get it now</button>
+        </div>
+      </div>
       <div
         className="slide"
         style={{ backgroundImage: `url(${slides2[currentIndex].url})` }}
       ></div>
-      <div className="dots-container">
+      {/* <div className="dots-container">
         {slides2.map((slide, slideIndex) => (
           <div
             className="dots"
@@ -49,7 +58,7 @@ const CardRight = ({ slides2 }) => {
             —
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
