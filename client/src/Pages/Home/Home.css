@@ -1,0 +1,15 @@
+.home {
+    display: flex;
+}
+
+.container-styles {
+    width: 800px;
+    height: 544px;
+    margin: 40px 0;
+}
+
+.container-styles1 {
+    width: 565px;
+    height: 543px;
+    margin: 40px 0;
+}

@@ -1,0 +1,10 @@
+* {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-image: url('./src/assets/images/Dark\ Gradient\ 15.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 100vh; */
+}
