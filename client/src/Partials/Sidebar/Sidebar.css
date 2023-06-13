@@ -10,7 +10,7 @@
 
 .sidebar {
   display: flex;
-  width: 14rem;
+  /* width: 14rem; */
   height: 90%;
   color: white;
   justify-content: flex-start;
@@ -66,3 +66,6 @@
   width: 100%;
 }
 
+.groups .group .settings {
+  margin-top: 90px;
+}

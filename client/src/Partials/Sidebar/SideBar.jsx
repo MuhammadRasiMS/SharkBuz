@@ -10,6 +10,7 @@ import Orders from "../../assets/icons/Orders.svg";
 import Favourites from "../../assets/icons/Favourites.svg";
 import Payments from "../../assets/icons/Payments.svg";
 import Winners from "../../assets/icons/Winners.svg";
+import Settings from "../../assets/icons/Settings.svg";
 
 const SideBar = () => {
   const [open, setOpen] = useState(false);
@@ -127,6 +128,9 @@ const SideBar = () => {
             <Item icon={Favourites} name="Favourites" />
             <Item icon={Payments} name="Payments" />
             <Item icon={Winners} name="Winners" />
+            <div className="settings">
+              <Item icon={Settings} name="Settings" />
+            </div>
           </div>
         </div>
       </motion.div>

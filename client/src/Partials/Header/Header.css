@@ -3,14 +3,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 85%;
   margin-top: 1.5rem;
+  z-index: 10;
+  margin-left: 11rem;
+
 }
 
 .search-bar {
   display: flex;
   gap: 0.5rem;
-  margin-left: 11rem;
   padding: 0.5rem 1rem;
   background-color: rgba(100, 110, 109, 0.2);;
   width: 27rem;
