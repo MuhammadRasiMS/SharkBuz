@@ -45,7 +45,7 @@ const MainCard = ({ slides }) => {
       className="slider"
       initial={{ x: 50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       key={slides[currentIndex].url}
     >
       <div className="free-to-play">
@@ -58,7 +58,7 @@ const MainCard = ({ slides }) => {
         className="image"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         key={slides[currentIndex].image}
       >
         <img src={slides[currentIndex].image} alt="products" />
@@ -68,7 +68,7 @@ const MainCard = ({ slides }) => {
         className="title"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1.3 }}
         key={slides[currentIndex].title}
       >
         {slides[currentIndex].title}
@@ -78,7 +78,7 @@ const MainCard = ({ slides }) => {
         className="description"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1.3 }}
         key={slides[currentIndex].description}
       >
         {slides[currentIndex].description}
@@ -88,7 +88,7 @@ const MainCard = ({ slides }) => {
         className="card-bottom"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1.3 }}
         // key={slides[currentIndex].description}
       >
         <div>

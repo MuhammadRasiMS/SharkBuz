@@ -6,6 +6,19 @@ html {
   scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+      width: 15px; 
+   }
+
+html::-webkit-scrollbar-track {
+    background-color: #051c3f;
+  }
+
+html::-webkit-scrollbar-thumb {
+    background: #00956a;
+    border-radius: 4px;
+  }
+
 body {
  background-image: linear-gradient(
   135deg,

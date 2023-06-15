@@ -49,7 +49,7 @@ const CardRight = ({ slides2 }) => {
       className="slider"
       initial={{ x: 50, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
       key={slides2[currentIndex].title}
     >
       <div className="left-arrow" onClick={goToPrevious}></div>
@@ -61,7 +61,7 @@ const CardRight = ({ slides2 }) => {
         className="title"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1.3 }}
         key={slides2[currentIndex].title}
       >
         {slides2[currentIndex].title}
@@ -70,7 +70,7 @@ const CardRight = ({ slides2 }) => {
         className="description1"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1.3 }}
         key={slides2[currentIndex].description}
       >
         {slides2[currentIndex].description}
@@ -79,7 +79,7 @@ const CardRight = ({ slides2 }) => {
         className="card-bottom"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1.3 }}
         // key={slides2[currentIndex].description}
       >
         <div>

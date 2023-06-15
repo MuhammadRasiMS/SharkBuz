@@ -27,7 +27,7 @@ const MainRight = () => {
         className="swiper-main"
       >
         <SwiperSlide>
-          <div className="mainright1">
+          <div className="mainright mainright1">
             <div className="left-section">
               <div className="year">
                 <p>2020</p>
@@ -46,7 +46,7 @@ const MainRight = () => {
               <img src="../../src/assets/images/earpod.png" alt="" />
             </div>
           </div>
-          <div className="mainright2">
+          <div className="mainright mainright2">
             <div className="left-section">
               <div className="year">
                 <p>2020</p>
@@ -61,14 +61,13 @@ const MainRight = () => {
                 </button>
               </div>
             </div>
-            <div className="draw-product2">
+            <div className="draw-product">
               <img src="../../src/assets/images/iphone2.png" alt="" />
             </div>
           </div>
         </SwiperSlide>
-
         <SwiperSlide>
-          <div className="mainright3">
+          <div className="mainright mainright3">
             <div className="left-section">
               <div className="year">
                 <p>2020</p>
@@ -84,26 +83,29 @@ const MainRight = () => {
               </div>
             </div>
             <div className="draw-product">
-              <img src="../../src/assets/images/earpod.png" alt="" />
+              <img src="../../src/assets/images/mini.png" alt="" />
             </div>
           </div>
-          <div className="mainright4">
+          <div className="mainright mainright4">
             <div className="left-section">
               <div className="year">
                 <p>2020</p>
               </div>
-              <h1>
-                Yearly <br /> Draw & Games
-              </h1>
-              <div className="get-container">
+              <h1>The Big Match</h1>
+              <h4
+                style={{ color: "white", fontWeight: 200, marginTop: "-20px" }}
+              >
+                Lifetime settlemet: <br /> Fortune of a Lifetime
+              </h4>
+              <div className="get-container" style={{ marginTop: "-11px" }}>
                 <p>₹10</p>
                 <button className="get-it-now">
                   <h2>+ Get it now</h2>
                 </button>
               </div>
             </div>
-            <div className="draw-product2">
-              <img src="../../src/assets/images/iphone2.png" alt="" />
+            <div className="draw-product">
+              <img src="../../src/assets/images/bigprize.png" alt="" />
             </div>
           </div>
         </SwiperSlide>

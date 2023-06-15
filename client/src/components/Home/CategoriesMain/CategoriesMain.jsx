@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import smallSlide from "./smallSlide";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import { EffectCards } from "swiper";
-import './CategoriesMain.css';
-
+import "./CategoriesMain.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -23,7 +23,6 @@ const CategoriesMain = ({ catSlider }) => {
       shadow.style.background = "none";
     });
   };
-
   return (
     <div className="cat-container">
       <Swiper
@@ -37,6 +36,7 @@ const CategoriesMain = ({ catSlider }) => {
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
+          reverseDirection: true,
         }}
         slidesPerView={1}
         spaceBetween={10}
@@ -62,9 +62,7 @@ const CategoriesMain = ({ catSlider }) => {
                     <h2>{item.title}</h2>
                     <h4>{item.rate}</h4>
                   </div>
-                  <div className="arrow">
-                    ▶
-                  </div>
+                  <div className="arrow">▶</div>
                 </div>
               </div>
               <img src={item.url} alt={item.name} />
@@ -72,10 +70,31 @@ const CategoriesMain = ({ catSlider }) => {
           );
         })}
       </Swiper>
+      <div className="small-container">
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          autoplay={{
+            delay: 500,
+          }}
+          // loop={true}
+          speed={2000}
+          modules={[Autoplay]}
+          className="small-swiper"
+        >
+          {smallSlide.map((item)=>{
+            return (
+              <SwiperSlide key={item.id}>
+                <div className="small-image">
+                  <img src={item.image} alt="image" />
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
     </div>
   );
 };
 
 export default CategoriesMain;
-
-

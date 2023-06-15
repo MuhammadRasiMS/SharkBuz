@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
+import usersOnline from "./usersOnline";
 
 const TopDeals = ({ topdealSlide, cardSlide }) => {
   return (
@@ -69,6 +70,40 @@ const TopDeals = ({ topdealSlide, cardSlide }) => {
                   <h3>{item.title}</h3>
                   <button className="td-get-it-now">Get it now</button>
                   <img src={item.url} alt="" />
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div> 
+      <div className="online-container">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          direction="vertical"
+          autoplay={{
+            delay: 3000, 
+          }}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          speed={2000}
+          modules={[Autoplay]}
+          className="online-slider"
+        >
+          {usersOnline.map((item) => {
+            return (
+              <SwiperSlide key={item.id}>
+                <div className="online-datas">
+                  <div className="user-image">
+                    <img src={item.image} alt="user" />
+                  </div>
+                  <div className="namendgame">
+                    <h3>{item.name}</h3>
+                    <p>Playing {item.game}</p>
+                  </div>
+                  <div className="online-dot"></div>
                 </div>
               </SwiperSlide>
             );

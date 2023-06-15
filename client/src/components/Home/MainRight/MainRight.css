@@ -5,56 +5,35 @@
   margin: -55px 0 0 -50px;
 }
 
-.mainright1 {
+.mainright {
   position: relative;
   width: 517px;
   height: 194.6px;
   border-radius: 30.4px;
   border: 1px solid rgb(167, 167, 167);
   border-width: 0.9px;
-  background: #067D71;
-  background: radial-gradient(at center top, #067D71, #071b24);
   margin-top: 50px;
   margin-left: 10px;
+}
+
+.mainright1 {
+  background: #067D71;
+  background: radial-gradient(at center top, #03453e, #071b24);
 }
 
 .mainright2 {
-  position: relative;
-  width: 517px;
-  height: 194.6px;
-  border-radius: 30.4px;
-  border: 1px solid rgb(167, 167, 167);
-  border-width: 0.9px;
   background: #ce6400;
-  background: radial-gradient(at center top, #ce6400, #071b24);
-  margin-top: 50px;
-  margin-left: 10px;
+  background: radial-gradient(at center top, #864100, #071b24);
 }
 
 .mainright3 {
-  position: relative;
-  width: 517px;
-  height: 194.6px;
-  border-radius: 30.4px;
-  border: 1px solid rgb(167, 167, 167);
-  border-width: 0.9px;
-  background: #18bfcb;
-  background: radial-gradient(at center top, #18bfcb, #071b24);
-  margin-top: 50px;
-  margin-left: 10px;
+  background: #cf2089;
+  background: radial-gradient(at center top, #861659, #071b24);
 }
 
 .mainright4 {
-  position: relative;
-  width: 517px;
-  height: 194.6px;
-  border-radius: 30.4px;
-  border: 1px solid rgb(167, 167, 167);
-  border-width: 0.9px;
-  background: #cf2089;
-  background: radial-gradient(at center top, #cf2089, #071b24);
-  margin-top: 50px;
-  margin-left: 10px;
+  background: #18bfcb;
+  background: radial-gradient(at center top, #0e7279, #071b24);
 }
 
 .left-section {
@@ -132,31 +111,20 @@
 }
 
 .draw-product {
-  margin-left: 300px;
-  height: 250px;
-  width: 200px;
-  margin-top: -50px;
+  margin-left: 160px;
+  height: 200px;
+  width: 350px;
+  margin-top: -8px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: last baseline;
+  justify-content: end;
 }
 
 .draw-product img {
-  width: 100%;
-  height: 100%;
   object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
 }
-
-.draw-product2 {
-  margin-left: 300px;
-  height: 250px;
-  width: 200px;
-  margin-top: -45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 
 .swiper-main {
   height: 500px;
