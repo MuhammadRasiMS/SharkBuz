@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </div>
       <div className="topdeals-container">
-        <TopDeals topdealSlide={slides3} />
+        <TopDeals topdealSlide={slides3} cardSlide={slides} />
       </div>
     </div>
   );

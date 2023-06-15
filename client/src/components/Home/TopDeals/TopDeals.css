@@ -1,6 +1,7 @@
 .topdeals {
+  position: relative;
   width: 326px;
-  height: 805.2px;
+  height: 820px;
   background: linear-gradient(
     150deg,
     #121541 1.13%,
@@ -98,3 +99,82 @@
   font-size: 16px;
 }
 
+.topdeals-card {
+  position: absolute;
+  width: 323px;
+  height: 250px;
+  margin-top: 20px;
+}
+
+.td-card-swiper {
+  object-fit: contain;
+   height: 110%;
+   width: 100%;
+}
+
+.card-slider img{
+  object-fit: contain;
+  width: 120%;
+  margin-left: -15px;
+}
+
+.topdeals-card .card-header {
+  position: absolute;
+  z-index: 20;
+}
+
+.topdeals-card .card-header h2 {
+  color: white;
+  margin-left: 90px;
+  margin-top: 35px;
+  font-size: 18px;
+}
+
+.topdeals-card .card-header button {
+  position: absolute;
+  margin-left: 13.5rem;
+  background-color: #047481;
+  border-radius: 1rem;
+  color: #ffffff;
+  font-style: italic;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  width: 65px;
+  margin-top: -32px;
+}
+
+.card-slider .td-card-image {
+  position: absolute;
+  width: 180px;
+  height: 150px;
+  margin-left: 135px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: last baseline;
+}
+
+.card-slider .td-card-image img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-slider h3 {
+  position: absolute;
+  color: #fff;
+  margin: 100px 0 0 40px;
+}
+
+.td-get-it-now {
+  position: absolute;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #0e7490, #2b6cb0);
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  margin-top: 140px;
+  margin-left: 40px;
+}

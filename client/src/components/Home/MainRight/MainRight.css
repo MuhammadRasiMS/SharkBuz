@@ -1,13 +1,60 @@
-.mainright {
+.mainright-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -55px 0 0 -50px;
+}
+
+.mainright1 {
   position: relative;
   width: 517px;
   height: 194.6px;
   border-radius: 30.4px;
   border: 1px solid rgb(167, 167, 167);
   border-width: 0.9px;
-  background: #067d71;
-  background: radial-gradient(at center top, #067d71, #071b24);
-  margin-bottom: 12px;
+  background: #067D71;
+  background: radial-gradient(at center top, #067D71, #071b24);
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.mainright2 {
+  position: relative;
+  width: 517px;
+  height: 194.6px;
+  border-radius: 30.4px;
+  border: 1px solid rgb(167, 167, 167);
+  border-width: 0.9px;
+  background: #ce6400;
+  background: radial-gradient(at center top, #ce6400, #071b24);
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.mainright3 {
+  position: relative;
+  width: 517px;
+  height: 194.6px;
+  border-radius: 30.4px;
+  border: 1px solid rgb(167, 167, 167);
+  border-width: 0.9px;
+  background: #18bfcb;
+  background: radial-gradient(at center top, #18bfcb, #071b24);
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.mainright4 {
+  position: relative;
+  width: 517px;
+  height: 194.6px;
+  border-radius: 30.4px;
+  border: 1px solid rgb(167, 167, 167);
+  border-width: 0.9px;
+  background: #cf2089;
+  background: radial-gradient(at center top, #cf2089, #071b24);
+  margin-top: 50px;
+  margin-left: 10px;
 }
 
 .left-section {
@@ -108,4 +155,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.swiper-main {
+  height: 500px;
+  width: 550px;
 }
