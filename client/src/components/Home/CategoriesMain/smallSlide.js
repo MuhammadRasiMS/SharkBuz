@@ -27,6 +27,10 @@ const smallSlide = [
     id: 7,
     image: "../../src/assets/images/camera.png",
   },
+  {
+    id: 8,
+    image: "../../src/assets/images/earpod.png",
+  },
 ];
 
 export default smallSlide;

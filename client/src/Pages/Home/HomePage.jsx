@@ -14,9 +14,9 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <div className="home">
-      <div className="sidebar-container">
+      {/* <div className="sidebar-container">
         <SideBar />
-      </div>
+      </div> */}
       <div className="containers">
         <div className="main-container">
           <motion.div

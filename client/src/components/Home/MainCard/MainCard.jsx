@@ -2,6 +2,7 @@ import "./MainCard.css";
 import { useEffect, useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MainCard = ({ slides }) => {
   const timerRef = useRef(null);
@@ -41,69 +42,71 @@ const MainCard = ({ slides }) => {
   }, [currentIndex, goToNext]);
 
   return (
-    <motion.div
-      className="slider"
-      initial={{ x: 50, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 1 }}
-      key={slides[currentIndex].url}
-    >
-      <div className="free-to-play">
-        <button>Free to Play</button>
-      </div>
-      <div className="left-arrow" onClick={goToPrevious}></div>
-      <div className="right-arrow" onClick={goToNext}></div>
-
+    <Link to={"/contests"}>
       <motion.div
-        className="image"
+        className="slider"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        key={slides[currentIndex].image}
+        key={slides[currentIndex].url}
       >
-        <img src={slides[currentIndex].image} alt="products" />
-      </motion.div>
-
-      <motion.div
-        className="title"
-        initial={{ x: 50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1.3 }}
-        key={slides[currentIndex].title}
-      >
-        {slides[currentIndex].title}
-      </motion.div>
-
-      <motion.div
-        className="description"
-        initial={{ x: 50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1.3 }}
-        key={slides[currentIndex].description}
-      >
-        {slides[currentIndex].description}
-      </motion.div>
-
-      <motion.div
-        className="card-bottom"
-        initial={{ x: 50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1.3 }}
-        // key={slides[currentIndex].description}
-      >
-        <div>
-          <p className="count">545K+ played</p>
+        <div className="free-to-play">
+          <button>Free to Play</button>
         </div>
-        <div>
-          <button>Get it now</button>
-        </div>
-      </motion.div>
+        <div className="left-arrow" onClick={goToPrevious}></div>
+        <div className="right-arrow" onClick={goToNext}></div>
 
-      <div
-        className="slide"
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-      ></div>
-    </motion.div>
+        <motion.div
+          className="image"
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          key={slides[currentIndex].image}
+        >
+          <img src={slides[currentIndex].image} alt="products" />
+        </motion.div>
+
+        <motion.div
+          className="title"
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.3 }}
+          key={slides[currentIndex].title}
+        >
+          {slides[currentIndex].title}
+        </motion.div>
+
+        <motion.div
+          className="description"
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.3 }}
+          key={slides[currentIndex].description}
+        >
+          {slides[currentIndex].description}
+        </motion.div>
+
+        <motion.div
+          className="card-bottom"
+          initial={{ x: 50, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.3 }}
+          // key={slides[currentIndex].description}
+        >
+          <div>
+            <p className="count">545K+ played</p>
+          </div>
+          <div>
+            <button>Get it now</button>
+          </div>
+        </motion.div>
+
+        <div
+          className="slide"
+          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+        ></div>
+      </motion.div>
+    </Link>
   );
 };
 

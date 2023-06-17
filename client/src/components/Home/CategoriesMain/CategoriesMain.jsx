@@ -77,7 +77,7 @@ const CategoriesMain = ({ catSlider }) => {
           autoplay={{
             delay: 500,
           }}
-          // loop={true}
+          loop={true}
           speed={2000}
           modules={[Autoplay]}
           className="small-swiper"

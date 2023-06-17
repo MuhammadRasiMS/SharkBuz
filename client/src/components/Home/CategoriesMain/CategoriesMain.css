@@ -3,7 +3,6 @@
 }
 .icon-title {
   width: 160px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,7 +11,11 @@
 
 .cat-content h2 {
   color: white;
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+.cat-content img {
+  margin-top: 10px;
 }
 
 .products1 {
@@ -40,11 +43,6 @@
   margin-left: 25px;
 }
 
-.cat-bottom .name-rate h2,
-.name-rate h4 {
-  line-height: 0.4;
-}
-
 .cat-bottom .name-rate h4 {
   color: white;
 }
@@ -55,6 +53,7 @@
   padding: 10px 15px;
   border-radius: 8px;
   border: 1px solid rgb(52, 52, 52);
+  margin-top: 15px;
 }
 
 .small-container {

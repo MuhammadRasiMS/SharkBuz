@@ -56,7 +56,7 @@ const SideBar = () => {
       opacity: 1,
     },
     false:{
-      opacity: 0,
+      opacity: 1,
     }
    }
   return (
@@ -95,9 +95,10 @@ const SideBar = () => {
             animate={`${open}`}
             variants={logoVariants}
           >
-            {open && <img src="../../src/assets/images/logo1.svg" alt="logo" />}
+            <img src="../../src/assets/images/logo1.svg" alt="logo" />
+            <h4>SharkBuz</h4>
           </motion.div>
-          <motion.div
+          {/* <motion.div
             layout
             initial={`${open}`}
             animate={`${open}`}
@@ -117,7 +118,7 @@ const SideBar = () => {
               src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
               alt="menu"
             />
-          </motion.div>
+          </motion.div> */}
         </div>
         <div className="groups">
           <div className="group">

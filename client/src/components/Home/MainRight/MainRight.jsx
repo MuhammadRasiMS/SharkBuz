@@ -93,11 +93,11 @@ const MainRight = () => {
               </div>
               <h1>The Big Match</h1>
               <h4
-                style={{ color: "white", fontWeight: 200, marginTop: "-20px" }}
+                style={{ color: "white", fontWeight: 200 }}
               >
                 Lifetime settlemet: <br /> Fortune of a Lifetime
               </h4>
-              <div className="get-container" style={{ marginTop: "-11px" }}>
+              <div className="get-container" >
                 <p>₹10</p>
                 <button className="get-it-now">
                   <h2>+ Get it now</h2>

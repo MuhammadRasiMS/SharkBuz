@@ -136,7 +136,7 @@
   cursor: pointer;
   font-size: 10px;
   width: 65px;
-  margin-top: -32px;
+  margin-top: -15px;
 }
 
 .card-slider .td-card-image {
@@ -192,7 +192,6 @@
 .online-datas {
   display: flex;
   align-items: center;
-  line-height: 0;
 }
 
 .online-datas .user-image {
@@ -212,7 +211,7 @@
   color: #ffffff;
   margin-left: 10px;
   font-size: 16px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .online-container .namendgame p {
