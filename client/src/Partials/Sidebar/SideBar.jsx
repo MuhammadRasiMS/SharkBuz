@@ -11,6 +11,7 @@ import Favourites from "../../assets/icons/Favourites.svg";
 import Payments from "../../assets/icons/Payments.svg";
 import Winners from "../../assets/icons/Winners.svg";
 import Settings from "../../assets/icons/Settings.svg";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const [open, setOpen] = useState(false);
@@ -89,15 +90,19 @@ const SideBar = () => {
           <TocRounded />
         </motion.div>
         <div className="main">
-          <motion.div
-            className="logo"
-            initial={`${open}`}
-            animate={`${open}`}
-            variants={logoVariants}
-          >
-            <img src="../../src/assets/images/logo1.svg" alt="logo" />
-            <h4>SharkBuz</h4>
-          </motion.div>
+          
+            <motion.div
+              className="logo"
+              initial={`${open}`}
+              animate={`${open}`}
+              variants={logoVariants}
+            >
+              <Link to={'/'}>
+              <img src="../../src/assets/images/logo1.svg" alt="logo" />
+              </Link>
+              <h4>SharkBuz</h4>
+            </motion.div>
+       
           {/* <motion.div
             layout
             initial={`${open}`}

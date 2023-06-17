@@ -1,10 +1,11 @@
-import React from 'react'
-import Live from '../../components/Contests/Live/Live'
+import React from 'react';
+import Live from '../../components/Contests/Live/Live';
+import cards from './cardsData';
 
 const ContestPage = () => {
   return (
     <div>
-        <Live />
+        <Live cardsData={cards} />
     </div>
   )
 }

@@ -1,40 +1,52 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Live.css";
-import InfiniteScroll from "react-infinite-scroll-component";
 
-const Live = () => {
-  const [datasource, setDataSource] = useState(Array.from({ length: 20 }));
-  const [hasMore, setHasMore] = useState(true);
-  const fetchMoreData = () => {
-    if (datasource.length < 200) {
-      //making api call
-      setTimeout(() => {
-        setDataSource(datasource.concat(Array.from({ length: 20 })));
-      }, 500);
-    }else {
-        setHasMore(false);
-    }
-  }
-   
+const Live = ({ cardsData }) => {
+  const imageUrls = [
+    "../../src/assets/card/card1.svg",
+    "../../src/assets/card/card2.svg",
+  ];
+
+  const getRandomImageUrl = () => {
+    const randomIndex = Math.floor(Math.random() * imageUrls.length);
+    return imageUrls[randomIndex];
+  };
+
   return (
     <div className="contests-container">
       <div id="parentScrollDiv" className="contests-datas">
-        <InfiniteScroll
-          dataLength={datasource.length}
-          next={fetchMoreData}
-          hasMore={hasMore}
-          loader={<p>Loading...</p>}
-          endMessage={<p>You are all set!</p>}
-          scrollableTarget="parentScrollDiv"
-        >
-          {datasource.map((item, index) => {
-            return (
-              <div className="cards">
-                This is a div #{index + 1} inside infinite
+        {cardsData.map((item) => {
+          const imageUrl = getRandomImageUrl();
+
+          return (
+            <div className="cards" key={item.id}>
+              <div className="play-free">
+                <button>Free to Play</button>
               </div>
-            );
-          })}
-        </InfiniteScroll>
+              <div className="products-container">
+                <img src={item.image} alt="product" />
+              </div>
+              <h1 className="product-title">{item.title}</h1>
+              <p className="product-description">{item.description}</p>
+              <div
+                className="card-bottom-get"
+              >
+                <div>
+                  <p className="get-count">545K+ played</p>
+                </div>
+                <div>
+                  <button>Get it now</button>
+                </div>
+              </div>
+              <div
+                className="card-bg"
+                style={{
+                  backgroundImage: `url(${imageUrl})`,
+                }}
+              ></div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
