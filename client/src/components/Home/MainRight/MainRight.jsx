@@ -18,9 +18,9 @@ const MainRight = () => {
         pagination={{
           clickable: true,
         }}
-        effect="fade" // Set the effect to 'fade'
+        effect="fade" 
         fadeEffect={{
-          crossFade: true, // Enable crossFade for smoother transition
+          crossFade: true, 
         }}
         speed={3000}
         modules={[EffectFade, Autoplay]}

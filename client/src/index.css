@@ -41,3 +41,8 @@ body {
   background-attachment: fixed;
   overflow-y: scroll;
 }
+
+Link {
+  text-decoration: none;
+  outline: none;
+}

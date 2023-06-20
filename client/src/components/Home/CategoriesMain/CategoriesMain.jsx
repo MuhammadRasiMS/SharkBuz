@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-cards";
+import { Link } from "react-router-dom";
 
 const CategoriesMain = ({ catSlider }) => {
   const swiperRef = useRef(null);
@@ -62,7 +63,9 @@ const CategoriesMain = ({ catSlider }) => {
                     <h2>{item.title}</h2>
                     <h4>{item.rate}</h4>
                   </div>
-                  <div className="arrow">▶</div>
+                  <Link to={'/category'} style={{ textDecoration: 'none', outline: 'none' }}>
+                    <div className="arrow">▶</div>
+                  </Link>
                 </div>
               </div>
               <img src={item.url} alt={item.name} />

@@ -13,11 +13,14 @@ const Live = ({ cardsData }) => {
   };
 
   return (
-    <div className="contests-container">
+    <>
+      <div className="live-head">
+        <img src="../../src/assets/icons/Contests.svg" alt="" />
+        <h2 className="heading">Live Contests !</h2>
+      </div>
       <div id="parentScrollDiv" className="contests-datas">
         {cardsData.map((item) => {
           const imageUrl = getRandomImageUrl();
-
           return (
             <div className="cards" key={item.id}>
               <div className="play-free">
@@ -28,9 +31,7 @@ const Live = ({ cardsData }) => {
               </div>
               <h1 className="product-title">{item.title}</h1>
               <p className="product-description">{item.description}</p>
-              <div
-                className="card-bottom-get"
-              >
+              <div className="card-bottom-get">
                 <div>
                   <p className="get-count">545K+ played</p>
                 </div>
@@ -48,7 +49,7 @@ const Live = ({ cardsData }) => {
           );
         })}
       </div>
-    </div>
+    </>
   );
 };
 

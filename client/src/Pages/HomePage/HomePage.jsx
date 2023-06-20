@@ -4,7 +4,7 @@ import CategoriesMain from "../../components/Home/CategoriesMain/CategoriesMain"
 import MainCard from "../../components/Home/MainCard/MainCard";
 import MainRight from "../../components/Home/MainRight/MainRight";
 import TopDeals from "../../components/Home/TopDeals/TopDeals";
-import "./Home.css";
+import "./HomePage.css";
 import slides from "./slidesData";
 import slides2 from "./slidesData2";
 import catSlide from "./catSlideData";

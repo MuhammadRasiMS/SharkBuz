@@ -48,12 +48,18 @@
 }
 
 .cat-bottom .arrow {
+  cursor: pointer;
   color: white;
   background: linear-gradient(#6f7580, #1f2225);
   padding: 10px 15px;
   border-radius: 8px;
   border: 1px solid rgb(52, 52, 52);
   margin-top: 15px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.cat-bottom .arrow:hover {
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .small-container {

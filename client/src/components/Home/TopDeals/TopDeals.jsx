@@ -11,6 +11,34 @@ const TopDeals = ({ topdealSlide, cardSlide }) => {
     <div className="topdeals">
       <div className="topdeals-datas">
         <p>Top Deals</p>
+        <style>
+          {`
+            .swiper-pagination-bullet {
+              width: 4px;
+              height: 15px;
+              background-color: #ccc;
+              opacity: 0.8;
+              transition: all 1s ease;
+              border-radius: 0px;
+              margin: 0 !important;
+            } 
+              .swiper-pagination-bullet:first-child {
+          border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+        }
+
+        .swiper-pagination-bullet:last-child {
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+        }
+            .swiper-pagination-bullet-active {
+              width: 4px;
+              height: 35px;
+              background-color: rgb(81, 81, 81);
+              border-radius: 0px;
+            }
+          `}
+        </style>
         <Swiper
           slidesPerView={3}
           spaceBetween={30}
@@ -25,6 +53,12 @@ const TopDeals = ({ topdealSlide, cardSlide }) => {
           speed={2000}
           modules={[Pagination, Autoplay]}
           className="topdeals-swiper"
+          style={{
+            display: "flex",
+            transform: "rotate(90deg) translateY(-60px) !important",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
           {topdealSlide.map((item) => {
             return (
@@ -46,8 +80,8 @@ const TopDeals = ({ topdealSlide, cardSlide }) => {
       </div>
       <div className="topdeals-card">
         <Swiper
-        slidesPerView={1}
-        spaceBetween={30}
+          slidesPerView={1}
+          spaceBetween={30}
           autoplay={{
             delay: 2500,
           }}
@@ -75,14 +109,14 @@ const TopDeals = ({ topdealSlide, cardSlide }) => {
             );
           })}
         </Swiper>
-      </div> 
+      </div>
       <div className="online-container">
         <Swiper
           slidesPerView={3}
           spaceBetween={30}
           direction="vertical"
           autoplay={{
-            delay: 3000, 
+            delay: 3000,
           }}
           loop={true}
           pagination={{
