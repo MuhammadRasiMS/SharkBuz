@@ -1,5 +1,6 @@
 import React from "react";
 import "./Categories.css";
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
@@ -17,7 +18,7 @@ const Categories = ({ catSlider }) => {
       <style>
         {`
             .swiper-pagination {
-              transform: translateY(10px) !important;
+              transform: translateY(13px) !important;
               border-radius: 2px;
 
             }
@@ -51,6 +52,7 @@ const Categories = ({ catSlider }) => {
       </style>
       <div className="cat-container2">
         <Swiper
+
           className="mySwiper2"
           speed={2000}
           autoplay={{
@@ -67,8 +69,15 @@ const Categories = ({ catSlider }) => {
           {catSlider.map((item) => {
             return (
               <SwiperSlide key={item.id}>
-                <Link to={"/category-select"}>
-                  <div className="cat-content2">
+                <Link to={"/category-select/" + item.id}>
+                  <motion.div
+                    className="cat-content2"
+                    transition={{
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    whileTap={{ scale: 0.9 }}
+                  >
                     <div className="products2">
                       <img src={item.image} alt="" />
                     </div>
@@ -78,8 +87,8 @@ const Categories = ({ catSlider }) => {
                         <h4>{item.rate}</h4>
                       </div>
                     </div>
-                  </div>
-                  <img src={item.url} alt={item.name} />
+                    <img src={item.url} alt={item.name} />
+                  </motion.div>
                 </Link>
               </SwiperSlide>
             );

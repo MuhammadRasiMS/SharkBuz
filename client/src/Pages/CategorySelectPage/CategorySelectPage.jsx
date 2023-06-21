@@ -1,11 +1,10 @@
 import React from 'react'
+import CategoryView from '../../components/CategorySelect/CategoryView/CategoryView'
 
 const CategorySelectPage = () => {
   return (
-    <div>CategorySelectPage
-        <h1>
-            Noooooooooooooooooooooo yesassssssssssasasaasasasaasa
-        </h1>
+    <div>
+      <CategoryView />
     </div>
   )
 }

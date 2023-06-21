@@ -47,7 +47,13 @@ const MainCard = ({ slides }) => {
         className="slider"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{
+          duration: 1,
+          stiffness: 400,
+          damping: 17,
+        }}
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: .9 }}
         key={slides[currentIndex].url}
       >
         <div className="free-to-play">

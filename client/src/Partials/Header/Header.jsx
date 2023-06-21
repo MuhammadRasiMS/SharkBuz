@@ -1,9 +1,9 @@
 import './Header.css';
 import SearchIcon from "@mui/icons-material/Search";
-import SendIcon from "@mui/icons-material/Send";
 import PersonIcon from "@mui/icons-material/Person";
 import NotificationIcon from '../../assets/icons/bell.svg';
 import Plane from "../../assets/icons/plane.svg";
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -18,11 +18,16 @@ const NavBar = () => {
             <img src={NotificationIcon} alt="notification" />
           </div>
           <div className="icon">
-            <img src={Plane} alt="messages" className='' />
+            <img src={Plane} alt="messages" className="" />
           </div>
-          <div className="icon">
-            <PersonIcon />
-          </div>
+          <Link
+            to={"/login"}
+            style={{ textDecoration: "none", outline: "none", color: "inherit" }}
+          >
+            <div className="icon">
+              <PersonIcon />
+            </div>
+          </Link>
         </div>
       </div>
     </div>
