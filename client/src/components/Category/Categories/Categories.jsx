@@ -20,7 +20,6 @@ const Categories = ({ catSlider }) => {
             .swiper-pagination {
               transform: translateY(13px) !important;
               border-radius: 2px;
-
             }
             .swiper-pagination-bullet {
               width: 15px;
@@ -33,26 +32,25 @@ const Categories = ({ catSlider }) => {
             }
 
              .swiper-pagination-bullet:first-child {
-          border-top-left-radius: 3px;
-          border-bottom-left-radius: 3px;
-        }
-
-        .swiper-pagination-bullet:last-child {
-          border-top-right-radius: 3px;
-          border-bottom-right-radius: 3px;
-        }
-            
-            .swiper-pagination-bullet-active {
-              width: 50px;
-              height: 7px;
-              background-color: rgb(81, 81, 81);
-              border-radius: 0px;
+                border-top-left-radius: 3px;
+                border-bottom-left-radius: 3px;
             }
-          `}
+
+              .swiper-pagination-bullet:last-child {
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+
+              .swiper-pagination-bullet-active {
+                width: 50px;
+                height: 7px;
+                background-color: rgb(81, 81, 81);
+                border-radius: 0px;
+            }
+        `}
       </style>
       <div className="cat-container2">
         <Swiper
-
           className="mySwiper2"
           speed={2000}
           autoplay={{
@@ -94,7 +92,7 @@ const Categories = ({ catSlider }) => {
             );
           })}
         </Swiper>
-      </div>
+      </div>      
     </div>
   );
 };

@@ -5,6 +5,7 @@ import ContestPage from "./Pages/ContestsPage/ContestPage";
 import CategoryPage from "./Pages/CategoryPage/CategoryPage";
 import CategorySelectPage from "./Pages/CategorySelectPage/CategorySelectPage";
 import LoginPage from "./Pages/LoginPage/LoginPage";
+import WinnersPage from "./Pages/WinnersPage/WinnersPage";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/contests" element={<ContestPage />} />
           <Route path="/category" element={<CategoryPage />} />
           <Route path="/category-select/:id" element={<CategorySelectPage />} />
+          <Route path="/winners" element={< WinnersPage />} />
         </Route>
         <Route path="/login" element={<LoginPage />} />
       </Routes>

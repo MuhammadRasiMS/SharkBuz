@@ -1,18 +1,18 @@
-import React from 'react'
-import './Item.css'
-import {motion} from 'framer-motion'
+import React from "react";
+import "./Item.css";
+import { motion } from "framer-motion";
 
-function Item({icon, name}) {
+function Item({ icon, name }) {
   const subheading = {
     true: {
       opacity: 1,
-      display:'block',
+      display: "block",
     },
     false: {
       opacity: 0,
-      display:'none',
-    }
-  }
+      display: "none",
+    },
+  };
   return (
     <motion.div
       className="item"
@@ -25,7 +25,8 @@ function Item({icon, name}) {
         cursor: "pointer",
       }}
       transition={{
-        type:'none', duration:0.2
+        type: "none",
+        duration: 0.2,
       }}
     >
       <div className="icons">
@@ -36,4 +37,4 @@ function Item({icon, name}) {
   );
 }
 
-export default Item
+export default Item;

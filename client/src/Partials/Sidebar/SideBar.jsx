@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
-import {TocRounded} from "@mui/icons-material";
+import { TocRounded } from "@mui/icons-material";
 import Item from "./Item";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 import Vector from "../../assets/icons/Vector.svg";
 import About from "../../assets/icons/About.svg";
 import Contests from "../../assets/icons/Contests.svg";
@@ -11,55 +11,79 @@ import Favourites from "../../assets/icons/Favourites.svg";
 import Payments from "../../assets/icons/Payments.svg";
 import Winners from "../../assets/icons/Winners.svg";
 import Settings from "../../assets/icons/Settings.svg";
-import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const [open, setOpen] = useState(false);
   const handleToggle = () => {
     setOpen(!open);
   };
-  const sideContainerVariants = {
-    true:{
-    },
-    false:{
-      transition:{
-        delay:0.6
-      }
-    }
-  }
 
-   const sidebarVariants = {
-     true: {
-      width:'15rem',
+  const handleMouseEnter = () => {
+    setOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setOpen(false);
+  };
+
+ const sideContainerVariants = {
+   true: {
+     transition: {
+       type: "spring",
+       stiffness: 100,
+       damping: 20,
      },
-     false: {
-       width: "5rem",
-       transition: {
-         delay: 0.4,
-       },
+   },
+   false: {
+     transition: {
+       delay: 0.6,
+       type: "spring",
+       stiffness: 100,
+       damping: 20,
      },
-   };
+   },
+ };
 
-   const profileVariants = {
-    true:{
-      alignSelf: 'center',
-      width: '4rem',
+const sidebarVariants = {
+  true: {
+    width: "15rem",
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 20,
     },
-    false:{
-      alignSelf: 'flex-start',
-      marginTop: '1rem',
-      width: '3rem',
-    }
-   };
+  },
+  false: {
+    width: "5rem",
+    transition: {
+      delay: 0.4,
+      type: "spring",
+      stiffness: 100,
+      damping: 20,
+    },
+  },
+};
 
-   const logoVariants = {
+  const profileVariants = {
+    true: {
+      alignSelf: "center",
+      width: "4rem",
+    },
+    false: {
+      alignSelf: "flex-start",
+      marginTop: "1rem",
+      width: "3rem",
+    },
+  };
+
+  const logoVariants = {
     true: {
       opacity: 1,
     },
-    false:{
+    false: {
       opacity: 1,
-    }
-   }
+    },
+  };
   return (
     <motion.div
       data-open={open}
@@ -67,6 +91,8 @@ const SideBar = () => {
       initial={`${open}`}
       animate={`${open}`}
       className="sidebar-container"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <motion.div
         initial={`${open}`}
@@ -74,7 +100,7 @@ const SideBar = () => {
         variants={sidebarVariants}
         className="sidebar"
       >
-        <motion.div
+        {/* <motion.div
           whileHover={{
             scale: 1.2,
             rotate: 180,
@@ -88,21 +114,17 @@ const SideBar = () => {
           className="lines_icon"
         >
           <TocRounded />
-        </motion.div>
+        </motion.div> */}
         <div className="main">
-          
-            <motion.div
-              className="logo"
-              initial={`${open}`}
-              animate={`${open}`}
-              variants={logoVariants}
-            >
-              <Link to={'/'}>
-              <img src="../../src/assets/images/logo1.svg" alt="logo" />
-              </Link>
-              <h4>SharkBuz</h4>
-            </motion.div>
-       
+          <motion.div
+            className="logo"
+            initial={`${open}`}
+            animate={`${open}`}
+            variants={logoVariants}
+          >
+            <img src="../../src/assets/images/logo1.svg" alt="logo" />
+            <h4>SharkBuz</h4>
+          </motion.div>
           {/* <motion.div
             layout
             initial={`${open}`}
@@ -145,5 +167,3 @@ const SideBar = () => {
 };
 
 export default SideBar;
-
-

@@ -42,7 +42,8 @@ body {
   overflow-y: scroll;
 }
 
-Link {
+.link-unstyled {
   text-decoration: none;
   outline: none;
+  color: inherit;
 }

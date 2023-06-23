@@ -7,10 +7,18 @@ const Login = () => {
       <div className="login-left">
         <h1>Welcome to SharkBuz</h1>
         <div className="alien">
-            <img src="../../src/assets/images/alien.png" className="" alt="alien" />
+          <img
+            src="../../src/assets/images/alien.png"
+            className=""
+            alt="alien"
+          />
         </div>
         <div className="earth">
-          <img src="../../src/assets/images/earth.png" className="" alt="earth" />
+          <img
+            src="../../src/assets/images/earth.png"
+            className=""
+            alt="earth"
+          />
         </div>
       </div>
       <div className="login-right">
@@ -55,6 +63,43 @@ const Login = () => {
           </form>
         </div>
       </div>
+      <style>
+        {`
+        input[type="text"],
+        textarea {
+          width: 100%;
+          padding: 12px;
+          border: none;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        input[type="submit"] {
+          background-color: #04AA6D;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          display: block;
+          margin: 0 auto;
+          font-size: 20px;
+        }
+        
+        input[type="submit"]:hover {
+          background-color: #45a049;
+        }
+        
+        input[type="text"]::placeholder,
+        textarea::placeholder {
+          border-bottom: 1px solid black;
+          font-size: 15px;
+        }
+      `}
+      </style>
     </div>
   );
 };
